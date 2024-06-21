@@ -1,0 +1,47 @@
+<!-- 
+# Isaac Young
+# MCS 275 Project 4
+# I am the sole author of this project, except where contributions of others
+# are noted in README.md.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>readdit: the front page of the internet</title> <!--title that shows on tabs on internet browser-->
+        <link rel="stylesheet" href = '/static/old_readdit.css'> <!--connects to the stylesheet that encompasses all html-->
+    </head>
+    <body>
+        <div class="logo-header">
+            <h1><a href='/'>readdit</a></h1> <!--adds title to webpage with link to homepage-->
+        </div>
+        <div class="post-panel">
+            <h2>{{ title }}</h2> <!--post title-->
+            <h5>sumbitted {{ created_ts }} by {{ user }}</h5> <!-- post metadata-->
+            <p>{{ description }}</p> <!--post description-->
+        </div>
+        <div class="comments-panel-head">
+            <h3>Comments:</h3>
+            <h4>Create a new comment</h4>
+            <form action="/newcomment/{{poid}}/submit" method="post"> <!--form that allows user to input data for new comment-->
+                <p>
+                    <label for="user">Username:</label>
+                    <input type="text" id="user" name="user">
+                </p>
+                <p>
+                    <label for="description">Description:</label>
+                    <input type="text" id="description" name="description" size="72">
+                </p>
+                <input type="submit" value="Create Comment"> <!--button that user pushes that submits all data-->
+            </form>
+            <br>
+            {% for comment in comments_data %} <!--lists all comments of specified post-->
+            <div class="comments-panel">
+                <div class="comment">
+                    <p class="comment-description">{{comment['description']}} <br>by {{comment['user']}}</p>
+                </div>
+            </div>
+            {% endfor  %}
+        </div>
+    </body>
+</html>

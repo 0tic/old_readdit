@@ -1,0 +1,55 @@
+<!-- 
+# Isaac Young
+# MCS 275 Project 4
+# I am the sole author of this project, except where contributions of others
+# are noted in README.md.
+-->
+
+<!doctype html>
+<html>
+<head>
+    <title>readdit: the front page of the internet</title> <!--title that shows on tabs on internet browser-->
+    <link rel="stylesheet" href = '/static/old_readdit.css'> <!--connects to the stylesheet that encompasses all html-->
+</head>
+
+<body>
+    <div class="logo-header">
+        <h1><a href='/'>readdit</a></h1> <!--adds title to webpage with link to homepage-->
+    </div>
+    <div class = "subreaddit-bar">
+        <h2>Subreaddits:</h2> 
+        <ul>
+            {% for subreaddit in subreaddit_data %} <!--lists the distinct subreaddits that users can click to view subreaddits-->
+            <li class = 'subreaddit-btn'><a href="/r/{{ subreaddit }}/">{{ subreaddit }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="submit-post">
+        <ul>
+            <li class="btn submit"><a href="/newpost/">Submit a new text post</a></li> <!--button that directs user newpost webpage that allows user to create a new post-->
+        </ul>
+    </div>
+    <br>
+    <div class="post-list">
+
+        {% for post in posts_data %} <!--lists all the posts in the database-->
+
+        <div class="post">
+            <h3 class="post-title"><a href='/post/{{ post["poid"] }}/'>{{post['title']}}</a></h3> <!--post title with link to specific post-->
+            <h5 class="post-metadata">created by {{post['user']}}</h5> <!--post metadata-->
+            <p class="post-description">{{post['description']}}</p> <!--post description-->
+            <ul>
+                <li class ="vote">{{post["votes"]}}</li> <!--post votes-->
+                <li class="btn vote"><a href="/post/{{ post["poid"] }}/upvote/">↑</a></li> <!--post upvote that allows user to upvote-->
+                <li class="btn vote"><a href="/post/{{ post["poid"] }}/downvote/">↓</a></li> <!--post downvote that allows user to downvote-->
+            </ul>
+            <p class="post-comments">Comments: {{post['comments']}}</p> <!--lists number of comments for each post-->
+        </div>
+
+        {% endfor %}
+
+    </div>
+    
+</body>
+
+</html>

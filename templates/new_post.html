@@ -1,0 +1,37 @@
+<!-- 
+# Isaac Young
+# MCS 275 Project 4
+# I am the sole author of this project, except where contributions of others
+# are noted in README.md.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>readdit: the front page of the internet</title> <!--title that shows on tabs on internet browser-->
+        <link rel="stylesheet" href = '/static/old_readdit.css'> <!--connects to the stylesheet that encompasses all html-->
+    </head>
+    <body>
+        <div class="logo-header">
+            <h1><a href='/'>readdit</a></h1> <!--adds title to webpage with link to homepage-->
+        </div>
+        <div class="post-panel">
+            <h2>Create a new post</h2>
+            <form action="/newpost/submit" method="post"> <!--form that allows user to input data for new post-->
+                <p>
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title"> <!-- data for title-->
+                    <label for="subreaddit">Subreaddit:</label>
+                    <input type="text" id="subreaddit" name="subreaddit"> <!--data for subreaddit-->
+                    <label for="user">Username:</label>
+                    <input type="text" id="user" name="user"> <!--data for username-->
+                </p>
+                <p>
+                    <label for="description">Description:</label>
+                    <input type="text" id="description" name="description" size="72"> <!--data for description-->
+                </p>
+                <input type="submit" value="Create"> <!--button that allows user to submit data-->
+            </form>
+        </div>
+    </body>
+</html>

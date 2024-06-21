@@ -1,0 +1,192 @@
+/*
+# Isaac Young
+# MCS 275 Project 4
+# This project was adapted from ordernova.css that was created for OrderNova in MCS 275 Spring 2024
+# and I am the sole author of the changes except as noted in README.md.
+*/
+
+/*
+The body tag is adapted from
+https://github.com/daviddumas/mcs275spring2023/blob/main/samplecode/html/ordernova/static/ordernova.css
+answer by David Dumas
+*/
+body {
+    font-family: "Helvetica", sans-serif;
+    /* Main text font */
+    max-width: 50rem;
+    /* Limit width of the body */
+    padding: 1em;
+    margin: auto;
+    /* Center the body */
+    background: white;
+    /* Main BG color */
+    color: cornflowerblue;
+    /* Main text color */
+}
+
+/*
+The body>tag tag is adapted from
+https://github.com/daviddumas/mcs275spring2023/blob/main/samplecode/html/ordernova/static/ordernova.css
+answer by David Dumas
+*/
+body>div {
+    /* Leave some margin and padding around top-level DIVs (those with parent BODY) */
+    padding: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+/*
+The logo-header div is adapted from
+https://github.com/daviddumas/mcs275spring2023/blob/main/samplecode/html/ordernova/static/ordernova.css
+answer by David Dumas
+*/
+div.logo-header {
+    /* Special styling for the div containing the title (mostly invisible) */
+    text-align: left;
+    overflow: auto;
+    background: none;
+    color: black;
+    /*text color*/
+}
+
+div.logo-header a{
+    text-decoration: none;
+    /* no underline */
+    color: inherit;
+    /* inherit = ignore default setting of a and default to containing tag style */
+}
+
+.post-title a{
+    text-decoration: none;
+    /* no underline */
+    color: inherit;
+    /* inherit = ignore default setting of a and default to containing tag style */
+}
+
+.post-list {
+    /*gives border for all posts*/
+    border: 1px solid lightblue;
+}
+
+.comments-panel {
+    /*gives border for all comments*/
+    border: 1px solid lightblue;
+}
+
+div.submit-post a{
+    text-decoration: none;
+    /* no underline */
+    color: inherit;
+    /* inherit = ignore default setting of a and default to containing tag style */
+    background-color: lightblue;
+    border-radius: 5px;
+    padding: 0.4em;
+    /* rounded corners */
+    float: right;
+    /*floats to the right*/
+}
+
+div.submit-post li{
+    list-style-type: none;
+    /*gets rid of the circle on the left of each list item*/
+}
+
+/*
+The logo-header div is adapted from
+https://github.com/daviddumas/mcs275spring2023/blob/main/samplecode/html/ordernova/static/ordernova.css
+answer by David Dumas
+*/
+div.logo-header h1 {
+    font-family: 'Nunito', sans-serif;
+    /* rounded sans font from Google Fonts */
+    font-weight: normal;
+    /* Not bold */
+    font-size: 36pt;
+    display: inline-block;
+    /* Make into a box that sits inside the div */
+    width: auto;
+    /* Reduce size of the box to just fit the text */
+    margin: auto;
+    /* Centers the box inside the parent div */
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0.15em;
+    padding-right: 0.3em;
+}
+
+/*
+The ul under post class is adapted from
+https://github.com/daviddumas/mcs275spring2023/blob/main/samplecode/html/ordernova/static/ordernova.css
+answer by David Dumas
+*/
+.post ul { /*for upvotes,downvotes,and vote number*/
+    padding-top: 0.1em;
+    padding: 0;
+    /*adds padding*/
+    margin: 0;
+    margin-top: 0.2em;
+    font-size: 80%;
+    display: inline-block;
+    text-transform: uppercase;
+    /*all uppercase*/
+    font-variant: small-caps;
+    font-size: 75%;
+    /*font size*/
+}
+
+.post ul.btn {
+    float: left;
+    /*floats to the left*/
+    list-style: none;
+    text-align: center;
+    padding: 0.4em;
+    /*adds padding*/
+    margin-right: 0.2em;
+    border-radius: 5px;
+    /* rounded corners */
+}
+
+.vote {
+    color: black;
+    /* upvotes,downvotes,and vote number is color black */
+}
+
+.post li {
+    list-style-type: none;
+    /* gets rid of circles next to list items */
+}
+
+.post li a {
+    text-decoration: none;
+    /* no underline */
+    color: inherit;
+    /* inherit = ignore default setting of a and default to containing tag style */
+}
+
+/*
+The subreaddit-btn tag is adapted from
+https://github.com/daviddumas/mcs275spring2023/blob/main/samplecode/html/ordernova/static/ordernova.css
+answer by David Dumas
+*/
+.subreaddit-btn {
+    float: left;
+    /*floats to the left*/
+    list-style: none;
+    text-align: center;
+    padding: 0.4em;
+    /*adds padding*/
+    margin-right: 0.2em;
+    background-color: lightblue;
+    /*sets background color to lightblue*/
+    color: cornflowerblue;
+    /*sets text color to cornflowerblue*/
+    border-radius: 5px;
+}
+
+.subreaddit-btn a {
+    text-decoration: none;
+    /* no underline */
+    color: inherit;
+    /* inherit = ignore default setting of a and default to containing tag style */
+}
