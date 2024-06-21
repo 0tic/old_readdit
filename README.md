@@ -15,7 +15,7 @@ own communities and gather people who have the same interests.
 
 There should be no set-up needed. You should only need to run old_readdit.py
 and the database should automatically create and create some sample code within
-the database. (similar to OrderNova)
+the database.
 If you click the word 'readdit' on any page, it should lead you back to the home page.
 If you click any subreaddits, it should list posts of that particular subreaddit.
 If you click the title of any post, it should lead you to that posts description, where you can see
@@ -29,7 +29,7 @@ posts. (all posts should be listed by order of amount of upvotes)
 
 All html files (new_post.html, old_readdit.html, post.html) were my personal contribution. 
 
-The the css file was heavily inspired by OrderNova css file. However all
+The the css file was heavily inspired by OrderNova css file (css file from class). However all
 modifications were my personal contribution. The parts that were taken from ordernova.css is stated in source code.
 All parts that were not cited in source code were my personal contribution.
 
